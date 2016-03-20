@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     
-     
+    
     
     
     @IBOutlet weak var textFieldUser: UITextField!
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 //Create Object
-    var personOne = users(userName: "itzhyxithyl", password: "qplazm123", realName: "Patrik Karlsson", email: "patrik.gpost@gmail.com", adress: "Aspevägen 2", city: "Hyppeln", country: "Sweden")
+    var personOne = users(userName: "123", password: "123", realName: "Patrik Karlsson", email: "patrik.gpost@gmail.com", adress: "Aspevägen 2", city: "Hyppeln", country: "Sweden")
     
 //Load in image string in a variable
     let checkOk = UIImage(named: "checkOk1.jpg")
@@ -65,15 +65,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //Button
    
 
-    
-    
-    
+    //check if password is false or true goto next view
+    var goToNextViewBool:Bool = false
     
     
     
     @IBAction func login(sender: AnyObject) {
     
         if textFieldUser.text == personOne.userName{
+           
+            
             
             //Display image if username is OK or FAIL!
             userNameCheckOkFail.image = checkOk
@@ -88,6 +89,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if textFieldPass.text == personOne.password
         {
            passwordCheckOkFail.image = checkOk
+            
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            
+            let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("newViewController") as! UINavigationController
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+
+           
            
         }
         else{
@@ -95,11 +105,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
           
         }
         
-
         
-    
-    
+        
+        
+        
+        //if username + password is ok goto next view controller
+        
+
+       
+        
     }
+    
+    
+    
+    
+   
+ 
+    
+    
+    
+    
     
    
     
