@@ -12,18 +12,30 @@ class newViewController: UIViewController {
     
     @IBOutlet weak var loadNSUserDefaults: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         //LOAD USERDEFAULTS
-        let sliderValue = NSUserDefaults.standardUserDefaults().integerForKey("slider_value") //LOAD NSUserDefaults
+        let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
         
-    loadNSUserDefaults.text = "\(sliderValue)"
+      
+        let sliderValueConvert = Int(sliderValue)
         
         
+        
+        
+    loadNSUserDefaults.text = "Brännbart:  \(sliderValueConvert)"
+        
+        
+   
         
     }
-
+   
+    
+    
+    
+   
 
     @IBOutlet weak var labelSliderOne: UILabel!
     
@@ -60,7 +72,7 @@ class newViewController: UIViewController {
         let sliderDouble = Double(sender.value)
        
         //SAVE SUSERDEFAULTS
-        NSUserDefaults.standardUserDefaults().setInteger(sliderInt, forKey: "slider_value")
+        NSUserDefaults.standardUserDefaults().setFloat(sliderFloat, forKey: "slider_value")
         
         
         let myRedColor = UIColor(
@@ -69,8 +81,9 @@ class newViewController: UIViewController {
             blue:0,
             alpha:1)
         
-        
       
+      
+        
         
         labelSliderOne.text = "\(sliderInt)%"
         
