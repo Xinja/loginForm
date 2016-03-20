@@ -37,14 +37,6 @@
                                 <rect key="frame" x="141" y="269" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P36-T5-c1h">
-                                <rect key="frame" x="74" y="193" width="172" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dve-zb-bL1"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New user? [Sign up]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xM9-mc-dQU">
                                 <rect key="frame" x="53" y="314" width="215" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -72,6 +64,14 @@
                                     <action selector="nextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4y-pj-Src"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P36-T5-c1h">
+                                <rect key="frame" x="74" y="193" width="172" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dve-zb-bL1"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -79,8 +79,8 @@
                     <navigationItem key="navigationItem" id="Bl2-gS-icE"/>
                     <connections>
                         <outlet property="passwordCheckOkFail" destination="bQy-2M-AlJ" id="94q-D7-8e0"/>
-                        <outlet property="textFieldPass" destination="zmS-D6-Jsw" id="Cg7-6X-Uuy"/>
-                        <outlet property="textFieldUser" destination="P36-T5-c1h" id="ha6-pU-is1"/>
+                        <outlet property="textFieldPass" destination="zmS-D6-Jsw" id="YLf-gR-DJ7"/>
+                        <outlet property="textFieldUser" destination="P36-T5-c1h" id="s6D-4I-WeX"/>
                         <outlet property="userNameCheckOkFail" destination="doM-4n-dFZ" id="9oY-ye-pOK"/>
                     </connections>
                 </viewController>
