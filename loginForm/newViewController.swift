@@ -32,8 +32,6 @@ class newViewController: UIViewController {
     
     
     
-   
-    
     
 
     
@@ -43,10 +41,15 @@ class newViewController: UIViewController {
   
     
     
+    
     @IBAction func sliderOne(sender: UISlider) {
        
+        NSUserDefaults.standardUserDefaults().setFloat(sender.value, forKey: "slider_Value")
+        let currentValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_Value")
         
-      
+                
+        
+        
         
         let sliderInt = Int(sender.value)
         let sliderFloat = Float(sender.value)
@@ -64,7 +67,7 @@ class newViewController: UIViewController {
             alpha:1)
         
       
-      
+   
         
         
         labelSliderOne.text = "\(sliderInt)%"
@@ -79,6 +82,7 @@ class newViewController: UIViewController {
         print("CGFloat: \(sliderCGFloat)")
         print("Double: \(sliderDouble)")
         
+    
         
         
     }
@@ -86,9 +90,11 @@ class newViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //LOAD USERDEFAULTS
         let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
         
+        var sliderLoadSlider = sliderValue
         
         let sliderValueConvert = Int(sliderValue)
         
@@ -97,7 +103,7 @@ class newViewController: UIViewController {
         
         loadNSUserDefaults.text = "Brännbart:  \(sliderValueConvert)"
         
-        
+   
         
     }
     
