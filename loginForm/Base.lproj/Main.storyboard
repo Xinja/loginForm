@@ -5,10 +5,26 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="sJW-o5-zEg">
+            <objects>
+                <navigationController storyboardIdentifier="newViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WDR-pb-dsN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WPM-dL-HEP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="E0X-cN-jrv" kind="relationship" relationship="rootViewController" id="ZmO-Nk-S3g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1b-dd-9Za" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="689"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginForm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="loginForm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,9 +65,18 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="T8H-y5-qza"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-TL-z5a">
+                                <rect key="frame" x="126" y="72" width="69" height="30"/>
+                                <state key="normal" title="Next View"/>
+                                <connections>
+                                    <action selector="nextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4y-pj-Src"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="jM9-Pm-ghY"/>
+                    <navigationItem key="navigationItem" id="Bl2-gS-icE"/>
                     <connections>
                         <outlet property="passwordCheckOkFail" destination="bQy-2M-AlJ" id="94q-D7-8e0"/>
                         <outlet property="textFieldPass" destination="zmS-D6-Jsw" id="Cg7-6X-Uuy"/>
@@ -61,7 +86,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="406"/>
+            <point key="canvasLocation" x="-281" y="661"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="are-jT-VTu">
+            <objects>
+                <viewController storyboardIdentifier="newView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E0X-cN-jrv" customClass="newViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hEs-HB-XXn"/>
+                        <viewControllerLayoutGuide type="bottom" id="V6b-QM-azS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tgv-7Y-m70">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T4K-ai-hof"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h33-1r-U2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544" y="683"/>
         </scene>
     </scenes>
 </document>

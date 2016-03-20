@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     
-     
+    
     
     
     @IBOutlet weak var textFieldUser: UITextField!
@@ -95,11 +95,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
           
         }
         
-
         
-    
-    
+        //if username + password is ok goto next view controller
+        
+
+       
+        
     }
+    
+    
+    @IBAction func nextView(sender: AnyObject) {
+    
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("newViewController") as! UINavigationController
+    
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
    
     
