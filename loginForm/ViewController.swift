@@ -10,11 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     
-  
-  
-    
-    
-    
+     
     
     
     @IBOutlet weak var textFieldUser: UITextField!
