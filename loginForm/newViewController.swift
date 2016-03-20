@@ -16,7 +16,7 @@ class newViewController: UIViewController {
         super.viewDidLoad()
        
         //LOAD USERDEFAULTS
-        let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
+        let sliderValue = NSUserDefaults.standardUserDefaults().integerForKey("slider_value") //LOAD NSUserDefaults
         
     loadNSUserDefaults.text = "\(sliderValue)"
         
@@ -52,14 +52,15 @@ class newViewController: UIViewController {
     @IBAction func sliderOne(sender: UISlider) {
        
         
-       //LOAD NSUSERDEFAULTS
-        NSUserDefaults.standardUserDefaults().setFloat(sender.value, forKey: "slider_value")
+      
         
-        let sliderInt = Int(sender.value*100)
+        let sliderInt = Int(sender.value)
         let sliderFloat = Float(sender.value)
         let sliderCGFloat = CGFloat(sender.value)
         let sliderDouble = Double(sender.value)
        
+        //SAVE SUSERDEFAULTS
+        NSUserDefaults.standardUserDefaults().setInteger(sliderInt, forKey: "slider_value")
         
         
         let myRedColor = UIColor(
