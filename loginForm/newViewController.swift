@@ -16,7 +16,7 @@ class newViewController: UIViewController {
     @IBAction func sliderOne(sender: UISlider) {
        
     
-        let sliderValue = sender.value
+        let sliderValue = lroundf(sender.value)
         labelSliderOne.text = "\(sliderValue)"
         
        
