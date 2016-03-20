@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 //Create Object
-    var personOne = users(userName: "itzhyxithyl", password: "qplazm123", realName: "Patrik Karlsson", email: "patrik.gpost@gmail.com", adress: "Aspevägen 2", city: "Hyppeln", country: "Sweden")
+    var personOne = users(userName: "123", password: "123", realName: "Patrik Karlsson", email: "patrik.gpost@gmail.com", adress: "Aspevägen 2", city: "Hyppeln", country: "Sweden")
     
 //Load in image string in a variable
     let checkOk = UIImage(named: "checkOk1.jpg")

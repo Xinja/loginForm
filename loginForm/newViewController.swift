@@ -10,10 +10,10 @@ import UIKit
 
 class newViewController: UIViewController {
 
-    
-    @IBAction func checkBoxButton(sender: UIButton) {
+
+    @IBAction func sliderOne(sender: UISlider) {
     }
-    
+   
     
     
 }
