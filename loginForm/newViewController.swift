@@ -13,25 +13,7 @@ class newViewController: UIViewController {
     @IBOutlet weak var loadNSUserDefaults: UILabel!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-        //LOAD USERDEFAULTS
-        let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
-        
-      
-        let sliderValueConvert = Int(sliderValue)
-        
-        
-        
-        
-    loadNSUserDefaults.text = "Brännbart:  \(sliderValueConvert)"
-        
-        
-   
-        
-    }
-   
+    
     
     
     
@@ -101,6 +83,24 @@ class newViewController: UIViewController {
         
     }
   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //LOAD USERDEFAULTS
+        let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
+        
+        
+        let sliderValueConvert = Int(sliderValue)
+        
+        
+        labelSliderOne.text = "\(sliderValueConvert)"
+        
+        loadNSUserDefaults.text = "Brännbart:  \(sliderValueConvert)"
+        
+        
+        
+    }
+    
     
     
     
