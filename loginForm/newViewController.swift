@@ -11,9 +11,21 @@ import UIKit
 class newViewController: UIViewController {
 
 
+    @IBOutlet weak var labelSliderOne: UILabel!
+    
     @IBAction func sliderOne(sender: UISlider) {
+       
+    
+        let sliderValue = sender.value
+        labelSliderOne.text = "\(sliderValue)"
+        
+       
+        
     }
+  
+    
    
     
     
 }
+
