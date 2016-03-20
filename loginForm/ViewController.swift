@@ -65,15 +65,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //Button
    
 
-    
-    
-    
+    //check if password is false or true goto next view
+    var goToNextViewBool:Bool = false
     
     
     
     @IBAction func login(sender: AnyObject) {
     
         if textFieldUser.text == personOne.userName{
+           
+            
             
             //Display image if username is OK or FAIL!
             userNameCheckOkFail.image = checkOk
@@ -88,12 +89,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if textFieldPass.text == personOne.password
         {
            passwordCheckOkFail.image = checkOk
+            
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            
+            let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("newViewController") as! UINavigationController
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+
+           
            
         }
         else{
             passwordCheckOkFail.image = crossFail
           
         }
+        
+        
+        
         
         
         //if username + password is ok goto next view controller
@@ -104,15 +117,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func nextView(sender: AnyObject) {
     
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
-        let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("newViewController") as! UINavigationController
     
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
+   
+ 
     
     
     

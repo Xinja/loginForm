@@ -57,13 +57,6 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="T8H-y5-qza"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-TL-z5a">
-                                <rect key="frame" x="126" y="72" width="69" height="30"/>
-                                <state key="normal" title="Next View"/>
-                                <connections>
-                                    <action selector="nextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4y-pj-Src"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P36-T5-c1h">
                                 <rect key="frame" x="74" y="193" width="172" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,6 +65,13 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dve-zb-bL1"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-TL-z5a">
+                                <rect key="frame" x="126" y="72" width="69" height="30"/>
+                                <state key="normal" title="Next View"/>
+                                <connections>
+                                    <action selector="nextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4y-pj-Src"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
