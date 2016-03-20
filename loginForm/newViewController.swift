@@ -15,11 +15,16 @@ class newViewController: UIViewController {
     
     @IBAction func sliderOne(sender: UISlider) {
        
-    
+        var rgbColor:Int
+        
         let sliderValue = lroundf(sender.value)
         labelSliderOne.text = "\(sliderValue)"
         
        
+        
+        rgbColor = lroundf(sender.value)
+        
+        print("RGBvalue: \(rgbColor)")
         
     }
   
