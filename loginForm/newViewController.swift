@@ -15,7 +15,7 @@ class newViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        //LOAD USERDEFAULTS
         let sliderValue = NSUserDefaults.standardUserDefaults().floatForKey("slider_value") //LOAD NSUserDefaults
         
     loadNSUserDefaults.text = "\(sliderValue)"
