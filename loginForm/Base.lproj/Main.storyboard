@@ -96,19 +96,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-Z8-1KV">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-Z8-1KV">
                                 <rect key="frame" x="101" y="84" width="118" height="31"/>
                                 <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sliderOne:" destination="E0X-cN-jrv" eventType="valueChanged" id="qOf-3m-vZP"/>
+                                    <action selector="valueChangeEnded:" destination="E0X-cN-jrv" eventType="touchDragExit" id="NmJ-ck-zDp"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-N6-C8e">
+                                <rect key="frame" x="42" y="209" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="T4K-ai-hof"/>
                     <connections>
                         <outlet property="labelSliderOne" destination="26n-Sv-XLe" id="7va-nS-Nj8"/>
+                        <outlet property="loadLabel" destination="4aR-N6-C8e" id="DGn-Wf-xOr"/>
+                        <outlet property="loadNSUserDefaults" destination="4aR-N6-C8e" id="cbA-Ig-ow6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h33-1r-U2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
